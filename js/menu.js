@@ -5,9 +5,9 @@ Drac.Menu.prototype = {
 
     },
     startGame: function() {
-        this.game.state.start('game');
+        this.game.state.start('MainGame');
     },
     credits: function() {
-        this.game.state.start('credits');
+        this.game.state.start('Credits');
     }
 }
