@@ -1,0 +1,1 @@
+Drac.Credits = function(game) {};
