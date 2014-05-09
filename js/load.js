@@ -1,6 +1,6 @@
 var Drac = {};
-Drac.Preloader = function(game) {};
-Drac.Preloader.prototype = {
+Drac.Loader = function(game) {};
+Drac.Loader.prototype = {
     preload: function() {
         this.game.stage.backgroundColor = '#000000';
 
