@@ -20,5 +20,8 @@ Drac.Game.prototype = {
     },
     hitDrac: function() {
 
+    },
+    quitGame: function(){
+        this.state.start('Menu');
     }
 };
