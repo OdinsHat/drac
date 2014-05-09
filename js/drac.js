@@ -4,5 +4,5 @@
     game.state.add('Loader', Drac.Loader);
     game.state.add('Menu', Drac.Menu);
     game.state.add('Credits', Drac.Credits);
-    game.state.add('Game', Drac.MainGame)
+    game.state.add('Game', Drac.Game)
 })();
