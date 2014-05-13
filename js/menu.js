@@ -12,4 +12,4 @@ Drac.Menu.prototype = {
     credits: function() {
         this.game.state.start('Credits');
     }
-}
+};

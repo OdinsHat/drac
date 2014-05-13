@@ -13,4 +13,4 @@ Drac.Credits.prototype = {
     start: function() {
         this.game.state.start('Game');
     }
-}
+};

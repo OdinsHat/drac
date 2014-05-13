@@ -24,4 +24,4 @@ Drac.Loader.prototype = {
     create: function(){
         this.game.state.start('Menu');
     }
-}
+};
