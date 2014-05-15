@@ -9,8 +9,9 @@ Drac.Loader.prototype = {
         //this.load.spritesheet('drac', 'assets/dracsheet.png');
 
         //Load UI parts
-        this.load.image('button-start', 'assets/button-start.png');
-        this.load.image('button-credits', 'assets/button-credits.png');
+        this.load.image('btn-start', 'assets/btn-start.png');
+        this.load.image('btn-help', 'assets/btn-help.png');
+        this.load.image('btn-credits', 'assets/btn-credits.png');
 
         //Load environment
         this.load.image('background', 'assets/background.jpg');
