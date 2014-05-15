@@ -17,22 +17,15 @@ Drac.Menu.prototype = {
          *
          * @type object
          */
-        var menuText = this.game.add.text(
-            this.game.world.centerX,
-            this.game.world.centerY,
-            "Space = Start\nC = Credits\nH = Help",
-            {
-                font: "30px Arial",
-                fill: "#000000",
-                stroke: '#ff0000',
-                strokeThickness: 2
-            }
-        );
-        menuText.align = 'center';
-        menuText.anchor.set(0.5);
+        this.startBtn = this.game.add.button(this.game.world.centerX - 95, 120, 'btn-start', this.startGame, this);
+        this.helpBtn = this.game.add.button(this.game.world.centerX - 95, 200, 'btn-help', this.gameHelp, this);
+        this.creditsBtn = this.game.add.button(this.game.world.centerX - 95, 280, 'btn-credits', this.credits, this);
     },
     startGame: function() {
         this.game.state.start('Game');
+    },
+    gameHelp: function(){
+        this.game.state.start('Help');
     },
     credits: function() {
         this.game.state.start('Credits');
