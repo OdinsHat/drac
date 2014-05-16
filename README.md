@@ -1,10 +1,21 @@
-Drac
-====
+Drac - Work in progress...
+==========================
 
-A horror platform game using the Phaser game engine.
+A fantasy platform game using the Phaser Javascript game engine.
 
-Work in progress
+## Playing
+Although its a work in progress you can play the latest incarnation at any
+time by doing the following:
 
-For future attribution:
+```
+git clone git@github.com:OdinsHat/drac.git
+cd drac
+grunt connect
+```
 
- * http://kvazars.com/littera/ - for converting TTF fonts to bitmap fonts.
+pen your web browser to: http://localhost:9001/
+
+
+_For future attribution:_
+
+* http://kvazars.com/littera/ - for converting TTF fonts to bitmap fonts.
