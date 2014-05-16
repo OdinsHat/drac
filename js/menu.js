@@ -17,9 +17,9 @@ Drac.Menu.prototype = {
          *
          * @type object
          */
-        this.startBtn = this.game.add.button(this.game.world.centerX - 95, 120, 'btn-start', this.startGame, this);
-        this.helpBtn = this.game.add.button(this.game.world.centerX - 95, 200, 'btn-help', this.gameHelp, this);
-        this.creditsBtn = this.game.add.button(this.game.world.centerX - 95, 280, 'btn-credits', this.credits, this);
+        this.startBtn = this.game.add.button(this.game.world.centerX - 95, 120, 'btn-start', this.startGame, this, 1, 0, 0);
+        this.helpBtn = this.game.add.button(this.game.world.centerX - 95, 200, 'btn-help', this.gameHelp, this, 1, 0, 0);
+        this.creditsBtn = this.game.add.button(this.game.world.centerX - 95, 280, 'btn-credits', this.credits, this, 1, 0, 0);
     },
     startGame: function() {
         this.game.state.start('Game');
