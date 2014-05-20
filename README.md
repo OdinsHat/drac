@@ -8,7 +8,7 @@ Although its a work in progress you can play the latest incarnation at any
 time by doing the following at your terminal:
 
 ```
-git clone git@github.com:OdinsHat/drac.git
+git clone https://github.com/OdinsHat/drac.git
 cd drac
 npm install
 grunt connect
