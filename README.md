@@ -17,6 +17,7 @@ grunt connect
 Open your web browser to: ```http://localhost:9001/```
 
 
-_For future attribution:_
+### Useful Links
 
 * http://kvazars.com/littera/ - for converting TTF fonts to bitmap fonts.
+* http://www.leshylabs.com/apps/spriteSheetAnimator/ - Sprite sheet animator
