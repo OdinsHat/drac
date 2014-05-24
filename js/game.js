@@ -10,7 +10,15 @@ Drac.Game = function(game) {
  */
 Drac.Game.prototype = {
     create: function() {
+        this.game.physics.startSystem(Phaser.Physics.ARCADE);
         this.createFloor();
+        this.player = this.game.add.sprite(32, this.game.world.height-160, 'you');
+        this.game.physics.arcade.enable(this.player);
+
+        this.player.animations.add('left', [117, 118, 119, 120, 121, 122, 123, 124, 125], 10, true);
+        this.player.animations.add('right', [143, 144, 145, 146, 147, 148, 149, 150, 151], 10, true);
+
+        this.cursors = this.game.input.keyboard.createCursorKeys();
     },
     update: function() {
 
