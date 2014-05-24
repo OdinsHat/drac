@@ -5,7 +5,7 @@ Drac.Loader.prototype = {
         this.game.stage.backgroundColor = '#000000';
 
         // Load characters
-        this.load.spritesheet('you', 'assets/main-char.png');
+        this.load.spritesheet('you', 'assets/main-char.png', 64, 64);
         //this.load.spritesheet('drac', 'assets/dracsheet.png');
 
         //Load UI parts
