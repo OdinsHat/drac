@@ -14,6 +14,9 @@ Drac.Game.prototype = {
         this.createFloor();
         this.player = this.game.add.sprite(32, this.game.world.height-160, 'you');
         this.game.physics.arcade.enable(this.player);
+        this.player.body.bounce.y = 0.1;
+        this.player.body.gravity.y = 9.5;
+        this.player.body.collideWorldBounds = true;
 
         // Animations
         this.player.animations.add('left', [117, 118, 119, 120, 121, 122, 123, 124, 125], 10, true); // Row J
