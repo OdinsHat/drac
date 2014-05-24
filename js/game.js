@@ -12,7 +12,7 @@ Drac.Game.prototype = {
     create: function() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
         this.createFloor();
-        this.player = this.game.add.sprite(32, this.game.world.height-160, 'you');
+        this.player = this.game.add.sprite(32, this.game.world.height-100, 'you');
         this.game.physics.arcade.enable(this.player);
         this.player.body.bounce.y = 0.1;
         this.player.body.gravity.y = 9.5;
