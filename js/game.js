@@ -18,15 +18,8 @@ Drac.Game.prototype = {
         this.player.body.gravity.y = 9.5;
         this.player.body.collideWorldBounds = true;
 
-        // Animations
-        this.player.animations.add('left', [117, 118, 119, 120, 121, 122, 123, 124, 125], 10, true); // Row J
-        this.player.animations.add('right', [143, 144, 145, 146, 147, 148, 149, 150, 151], 10, true); // Row L
-
-        this.player.animations.add('cast-small-left', [65, 66, 67, 68, 69, 70, 71, 72], 10, true); // Row F
-        this.player.animations.add('cast-small-right', [91, 92, 93, 94, 95, 96, 97, 98], 10, true); // Row H
-
-        this.player.animations.add('cast-large-left', [221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233]); // Row R
-        this.player.animations.add('cast-large-right', [247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259]); // Row T0
+        this.key_space = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        this.key_c = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
 
         this.player.animations.add('castout-right', [39, 40, 41, 42, 43, 44, 45]); // Row D
         this.player.animations.add('castout-left', [13, 14, 15, 16, 17, 18, 19]); // Row B

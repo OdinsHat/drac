@@ -1,12 +1,6 @@
 Drac.Menu = function(game) {};
 Drac.Menu.prototype = {
     create: function() {
-        var space_key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        space_key.onDown.add(this.startGame, this);
-
-        var c_key = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
-        c_key.onDown.add(this.credits, this);
-
         this.game.stage.setBackgroundColor(0x2d2d2d);
 
         /**
