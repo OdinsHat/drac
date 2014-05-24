@@ -37,6 +37,8 @@ Drac.Game.prototype = {
         }else if(this.cursors.right.isDown){
             this.player.body.velocity.x = 100;
             this.player.animations.play('right');
+        }else if(this.key_c.isDown){
+            this.player.animations.play('cast-large-left');
         }else{
             this.player.animations.stop();
             this.player.frame = 78;
