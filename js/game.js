@@ -21,7 +21,20 @@ Drac.Game.prototype = {
         this.cursors = this.game.input.keyboard.createCursorKeys();
     },
     update: function() {
+        this.game.physics.arcade.collide(this.player, this.ground);
 
+        this.player.body.velocity.x = 0;
+
+        if (this.cursors.left.isDown){
+            this.player.body.velocity.x = -100;
+            this.player.animations.play('left');
+        }else if(this.cursors.right.isDown){
+            this.player.body.velocity.x = 100;
+            this.player.animations.play('right');
+        }else{
+            this.player.animations.stop();
+            this.player.frame = 78;
+        }
     },
     touchDrac: function() {
 
