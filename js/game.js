@@ -46,13 +46,24 @@ Drac.Game.prototype = {
         }else if(this.cursors.right.isDown){
             this.player.body.velocity.x = 100;
             this.player.animations.play('right');
-        }else if(this.cursors.up.isDown && this.cursors.left.isDown){
-            this.player.animations.play('cast-large-right');
-        }else if(this.key_c.isDown){
-            this.player.animations.play('cast-large-left');
         }else{
             this.player.animations.stop();
             this.player.frame = 78;
+        }
+
+        if(this.cursors.up.isDown){
+            if(this.player.body.onFloor()){
+                this.player.body.velocity.y = -150;
+            }
+        }
+
+        if(this.keyC.isDown){
+            console.log('Casting');
+            this.player.animations.play('cast-small-right');
+        }
+
+        if(this.keySpace.isDown){
+            this.player.animations.play('cast-large-right');
         }
     },
     touchDrac: function() {
