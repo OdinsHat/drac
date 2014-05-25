@@ -27,14 +27,12 @@ Drac.Game.prototype = {
         this.game.camera.follow(this.player);
         this.game.physics.arcade.gravity.y = 200;
 
-        this.key_space = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-
-        this.key_c = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
-        this.key_c.onDown.add(this.castSpell, this);
-
         this.setupAnimations();
 
+        //Set up keys
         this.cursors = this.game.input.keyboard.createCursorKeys();
+        this.keyC = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
+        this.keySpace = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
     },
     update: function() {
