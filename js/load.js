@@ -4,9 +4,6 @@ Drac.Loader.prototype = {
     preload: function() {
         this.game.stage.backgroundColor = '#000000';
 
-        // Load characters
-        this.load.spritesheet('you', 'assets/main-char.png', 64, 64);
-        //this.load.spritesheet('drac', 'assets/dracsheet.png');
 
         //Load UI parts
         this.load.spritesheet('btn-start', 'assets/btn-start-sprite.png', 220, 58);
@@ -27,6 +24,10 @@ Drac.Loader.prototype = {
 
         //Load music
         //this.load.audio('ghosts', ['assets/ghosts.ogg']);
+
+        // Load characters
+        this.load.spritesheet('you', 'assets/main-char.png', 64, 64);
+        //this.load.spritesheet('drac', 'assets/dracsheet.png');
     },
     create: function(){
         this.game.state.start('Menu');
