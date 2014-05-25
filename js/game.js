@@ -20,12 +20,13 @@ Drac.Game.prototype = {
         this.map.setCollisionBetween(1, 5);
         //this.layer.resizeWorld();
 
-        // Player
-        this.player = this.game.add.sprite(32, this.game.world.height-100, 'you');
-        this.game.physics.arcade.enable(this.player);
-        this.player.body.bounce.y = 0.1;
-        this.player.body.gravity.y = 9.5;
-        this.player.body.collideWorldBounds = true;
+        // Set up Player
+        this.player = this.game.add.sprite(30, this.game.world.height-150, 'you');
+        this.game.physics.enable(this.player);
+        this.player.body.bounce.set(0.1);
+        this.player.body.tilePadding.set(32);
+        this.game.camera.follow(this.player);
+        this.game.physics.arcade.gravity.y = 200;
 
         this.key_space = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
