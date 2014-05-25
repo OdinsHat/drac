@@ -38,7 +38,7 @@ Drac.Game.prototype = {
 
     },
     update: function() {
-        this.game.physics.arcade.collide(this.player, this.ground);
+        this.game.physics.arcade.collide(this.player, this.map);
 
 
         this.player.body.velocity.x = 0;
