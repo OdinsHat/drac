@@ -11,14 +11,13 @@ Drac.Game = function(game) {
 Drac.Game.prototype = {
     create: function() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
-        //this.createFloor();
 
         //MAP
         this.map = this.game.add.tilemap('map');
         this.map.addTilesetImage('level');
         this.layer = this.map.createLayer('Tile Layer 1');
-        this.map.setCollisionBetween(1, 5);
-        //this.layer.resizeWorld();
+        this.layer.resizeWorld();
+        this.map.setCollisionBetween(1, 5); // Sets which tiles inn the map will collide with you 1-5
 
         // Set up Player
         this.player = this.game.add.sprite(30, this.game.world.height-150, 'you');
@@ -39,8 +38,7 @@ Drac.Game.prototype = {
 
     },
     update: function() {
-        this.game.physics.arcade.collide(this.player, this.map);
-
+        this.game.physics.arcade.collide(this.player, this.layer);
 
         this.player.body.velocity.x = 0;
 
