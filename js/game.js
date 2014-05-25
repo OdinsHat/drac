@@ -76,9 +76,10 @@ Drac.Game.prototype = {
         // Draw shape
         this.ground.drawRect(-2, this.game.world.height-20, this.game.world.width+20, 20);
         this.ground.endFill();
+        this.game.physics.enable(this.ground);
         this.ground.enableBody = true;
         //This doesn't work - :(
-        //this.ground.body.immovable = true;
+        this.ground.body.immovable = true;
     },
     setupAnimations: function() {
         // Animations
