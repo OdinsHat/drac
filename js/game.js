@@ -58,12 +58,19 @@ Drac.Game.prototype = {
         }
 
         if(this.keyC.isDown){
-            console.log('Casting');
-            this.player.animations.play('cast-small-right');
+            if (this.cursors.right.isDown){
+                this.player.animations.play('cast-small-right');
+            } else if (this.cursors.left.isDown){
+                this.player.animations.play('cast-small-left');
+            }
         }
 
         if(this.keySpace.isDown){
-            this.player.animations.play('cast-large-right');
+            if (this.cursors.right.isDown){
+                this.player.animations.play('cast-large-right');
+            } else if (this.cursors.left.isDown){
+                this.player.animations.play('cast-large-left');
+            }
         }
     },
     touchDrac: function() {
