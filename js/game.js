@@ -11,7 +11,16 @@ Drac.Game = function(game) {
 Drac.Game.prototype = {
     create: function() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
-        this.createFloor();
+        //this.createFloor();
+
+        //MAP
+        this.map = this.game.add.tilemap('map');
+        this.map.addTilesetImage('level');
+        this.layer = this.map.createLayer('Tile Layer 1');
+        this.map.setCollisionBetween(1, 5);
+        //this.layer.resizeWorld();
+
+        // Player
         this.player = this.game.add.sprite(32, this.game.world.height-100, 'you');
         this.game.physics.arcade.enable(this.player);
         this.player.body.bounce.y = 0.1;

@@ -13,6 +13,12 @@ Drac.Loader.prototype = {
         this.load.spritesheet('btn-help', 'assets/btn-help-sprite.png', 220, 58);
         this.load.spritesheet('btn-credits', 'assets/btn-credits-sprite.png', 220, 58);
 
+        //Load level map
+        this.game.load.tilemap('map', 'assets/levels/level1.json', null, Phaser.Tilemap.TILED_JSON);
+
+        // Load the image 'level.png' and associate it in the cache as 'level'
+        this.game.load.image('level', 'assets/levels/level.png');
+
         //Load environment
         //this.load.image('background', 'assets/background.jpg');
         //this.load.image('ledge1', 'assets/ledge1.png');
