@@ -49,6 +49,8 @@ Drac.Game.prototype = {
         }else if(this.cursors.right.isDown){
             this.player.body.velocity.x = 100;
             this.player.animations.play('right');
+        }else if(this.cursors.up.isDown){
+            this.player.animations.play('cast-large-right');
         }else if(this.key_c.isDown){
             this.player.animations.play('cast-large-left');
         }else{
