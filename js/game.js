@@ -107,9 +107,5 @@ Drac.Game.prototype = {
         this.player.animations.add('slash-right', [195, 196, 197, 198, 199, 200], 10, true); // Row P
 
         this.player.animations.add('player-die', [260, 261, 262, 263, 264, 265], 5, false); // Row U
-    },
-    castSpell: function(){
-        this.player.animations.stop();
-        this.player.animations.play('castout-right');
     }
 };
